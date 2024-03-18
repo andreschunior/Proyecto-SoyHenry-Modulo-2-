@@ -32,10 +32,23 @@ function processData(data) {
       // Contenedor para las calificaciones
       const calificacionDiv = createQualitiesDiv("Calificación:", element.rate);
       calificacionDiv.classList.add("calificacionDiv"); // agregar estilo a las calificaciones
+
+      //contenedor para año
+      const yearDiv = createQualitiesDiv("Year:", element.year);
+      yearDiv.classList.add("calificacionDiv"); // agregar estilo a año
+
+      //contenedor para director
+      const directorDiv = createQualitiesDiv("Director:", element.director);
+      directorDiv.classList.add("calificacionDiv");
+
+
     
       // Contenedor para los generos
       const generoDiv = createQualitiesDiv("Género:", element.genre.join(", "));
       generoDiv.classList.add("generoDiv"); // agregar estilo a los géneros
+
+       generoDiv.style.whiteSpace = 'normal';
+
     
       // Contenedor para la duración
       const duracionDiv = createQualitiesDiv("Duración:", element.duration);
@@ -45,9 +58,12 @@ function processData(data) {
       peliculaContainer.appendChild(titleElement);
       peliculaContainer.appendChild(posterContainer);
       peliculaContainer.appendChild(calificacionDiv);
+      peliculaContainer.appendChild(directorDiv);
       peliculaContainer.appendChild(generoDiv);
+      peliculaContainer.appendChild(yearDiv)
       peliculaContainer.appendChild(duracionDiv);
       peliculaContainer.appendChild(audioElement);
+
 
 
       // logica para dispositivos moviles 

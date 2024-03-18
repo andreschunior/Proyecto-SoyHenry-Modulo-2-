@@ -3,6 +3,7 @@ const express = require('express');
 const router = require('./routes/routes')
 const morgan = require('morgan');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 //solicitud entra
 const app = express();
@@ -25,6 +26,9 @@ app.use(express.json());
 
 //envio al enrutador la solicitud
 app.use(router);
+
+
+app.use(bodyParser.json());
 
 
 module.exports = app;

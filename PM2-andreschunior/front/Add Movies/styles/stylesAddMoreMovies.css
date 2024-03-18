@@ -1,0 +1,171 @@
+body {
+
+    background-size: cover;
+ 
+   
+ }
+ .smootTransition{
+ 
+    animation: background-image 3s;
+ }
+ 
+ @keyframes background-image {
+    from {
+        opacity: 0;
+    }
+ 
+    10% {
+        opacity: 0;
+    }
+ 
+    to {
+        opacity: 1;
+    }  
+ }
+ selector {
+ 
+    animation: background-image 3s;
+ }
+ 
+ header {
+     max-width: 100vw;
+  }
+  
+  #logoDiv{
+     background-color: black;
+  }
+ 
+  #logo{
+      margin-top: 2em;
+      max-width: 12em;
+      margin-bottom: 1.5em; 
+      margin-left: 3em;
+      height: auto;
+  }
+  
+  nav {
+      display: flex;
+      justify-content: end;
+      margin-left: 0em;
+      margin-top: 0;
+      background-color: #2D3E58;
+  }
+  
+  
+  nav a {
+      color:  #ffffff;
+      font-family: 'Roboto Mono', monospace;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin-right: 4em;
+      font-size: 1.5em;
+  }
+
+  .container-md {
+    margin-top: 2em;
+    background-color: #2D3E58;
+     display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh; 
+  width: 35vw !important;
+  border-radius: 15px;
+  }
+  .tituloDiv{
+    color: white;
+    margin-bottom: 1.5em !important;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .form-floating{
+    width: 70%;
+    margin-top: 1em;
+    display: flex;
+   
+  }
+
+  .labelContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .form-floating {
+    width: 48%; /* Ajusta según sea necesario para el ancho de cada elemento */
+    margin-bottom: 10px; /* Ajusta según sea necesario */
+  }
+  
+ #posterUrl{
+    width: 100%;
+ }
+ #botonesContainer{
+   display: flex;
+   flex-direction: row;
+ }
+
+ .btn-primary{
+    margin-top: 1em;
+ }
+
+#botonNewMovie{
+   margin-right: 2em;
+   
+}
+
+#botonClean{
+   margin-top: 1em;
+   height: auto;
+}
+
+ @media (max-width: 768px) {
+
+    nav {
+        justify-content: end;
+        font-size: 0.8em;
+        margin-right: 0px;
+        background-color: #2D3E58;
+     }
+     nav a {
+        color:  #ffffff;
+        font-family: 'Roboto Mono', monospace;
+        text-decoration: none;
+        margin-right: 0em;
+     }
+ 
+    .container-md {
+        margin-top: 2em;
+        background-color: #2D3E58;
+         display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 68vh; 
+      width: 80vw !important;
+      border-radius: 15px;
+      }
+
+      .tituloDiv{
+        color: white;
+        margin-top: 0.2em;
+        font-family: 'Roboto Mono', monospace;
+        text-align: center;
+        
+      }
+
+      #botonNewMovie{
+         margin-top: 1em;
+         font-size: 1.1em;
+      }
+
+      #botonClean{
+         font-size: 1em;
+         margin-top: 1em;
+         margin-left: em;
+      }
+
+ }
+  
+
+
+
+  

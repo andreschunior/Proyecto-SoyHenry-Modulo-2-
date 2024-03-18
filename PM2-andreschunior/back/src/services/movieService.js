@@ -1,6 +1,12 @@
-const tempData = require('../tempData');
+// const tempData = require('../tempData');
+// const Movie = require('./models/Movie');
+// const tempData = Movie;
+// module.exports = tempData;
+const Movie = require('../models/Movie');
+// const Movie = require('../tempData');
 
-class Movie {
+
+class peliculas {
     constructor(title, year, director, duration, genre, rate, poster) {
         if (!title || !poster || !director) {
             const missingFields = [];
@@ -23,11 +29,12 @@ class Movie {
 }
 
 module.exports = {
-    getMovies: function () {
+    getMovies: async  function () {
         try {
-            const movies = tempData.map((movieData, index) => {
+            const info = await Movie.find();
+            const movies = info.map((movieData, index) => {
                 try {
-                    return new Movie(
+                    return new peliculas(
                         movieData.title,
                         movieData.year,
                         movieData.director,
@@ -42,12 +49,30 @@ module.exports = {
                 }
             });
             return movies;
+            
         } catch (error) {
             console.error('Error en getMovies:', error);
             throw new Error('Error al crear instancias de películas: ' + error.message);
         }
+    },
+
+    addMovieFromForm: async function (form) {
+        try{
+            const addedMovie = await Movie.create(form);
+            return addedMovie;
+             }
+    
+        catch (error) {
+            // Manejar errores, por ejemplo, registrar en un archivo de registro o lanzar una excepción
+            console.error('Error al agregar la película:', error);
+            throw new Error('No se pudo agregar la película');
+        }
+
+
+
     }
 };
+
 
 
 
